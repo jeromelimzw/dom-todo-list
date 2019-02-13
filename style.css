@@ -1,19 +1,50 @@
 body {
-	border: 1px dotted tomato;
-	box-sizing: border-box;
-	border-width: 0 1px;
-	font-family: sans-serif;
-	font-size: 2rem;
-	margin: 0 auto;
-	max-width: 700px;
-	min-height: 100vh;
-	padding: 4rem;
+  border: 1px dotted tomato;
+  box-sizing: border-box;
+  border-width: 0 1px;
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 100vh;
+  padding: 4rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 ul {
-	padding: 0;
+  margin: 10px;
 }
 
 ul li {
-	padding: 1rem 0;
+  padding: 1rem 0;
+  text-transform: capitalize;
+  font-style: italic;
+  cursor: pointer;
+  line-height: 20%;
+  list-style-type: circle;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.deleted {
+  display: none;
+}
+
+small {
+  font-size: 0.5em;
+  line-height: 20%;
+}
+
+h1 {
+  margin: 0;
+}
+
+#newItem {
+  width: 80%;
+  border: 1px solid blue;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1em;
 }
