@@ -1,8 +1,12 @@
-const tasks = ["buy milk", "eat dinner", "nail javascript", "give feedback"];
+const tasks = ["wash the cat", "take a snack", "bring it back"];
 
-const render = arr => {
-  const list = document.getElementById("todo-list");
-  arr.forEach(a => {
+const render = () => {
+  document.getElementById("todo-list").remove();
+  const div = document.getElementById("above-todo-list");
+  const list = document.createElement("UL");
+  list.id = "todo-list";
+  div.appendChild(list);
+  tasks.forEach(a => {
     const newText = document.createTextNode(a);
     const newItem = document.createElement("LI");
     newItem.addEventListener("click", event =>
@@ -19,7 +23,7 @@ const render = arr => {
 const addItem = () => {
   let searchValue = document.getElementById("newItem").value;
   searchValue !== "" && tasks.push(searchValue);
-  render([tasks[tasks.length - 1]]);
+  render();
   document.getElementById("newItem").value = "";
 };
 
@@ -27,4 +31,4 @@ document.addEventListener("keyup", event => {
   event.keyCode === 13 && addItem();
 });
 
-render(tasks);
+render();
